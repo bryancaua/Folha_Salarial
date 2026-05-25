@@ -1,7 +1,3 @@
-void main() {
-
-}
-
 public class Colaborador {
 
     // Constante
@@ -25,6 +21,35 @@ public class Colaborador {
         this.percentualComissao = percentualComissao;
         this.valorPorPeca = valorPorPeca;
         this.quantidadeProduzida = quantidadeProduzida;
+    }
+
+    // Getters
+    public int getRegistro() {
+        return registro;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public TipoColaborador getTipo() {
+        return tipo;
+    }
+
+    public double getVendas() {
+        return vendas;
+    }
+
+    public double getPercentualComissao() {
+        return percentualComissao;
+    }
+
+    public double getValorPorPeca() {
+        return valorPorPeca;
+    }
+
+    public int getQuantidadeProduzida() {
+        return quantidadeProduzida;
     }
 
     public double calcularSalarioFinal() {
