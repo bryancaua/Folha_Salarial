@@ -31,7 +31,7 @@ public class Colaborador {
         if (tipo == TipoColaborador.PADRAO) {
             return SALARIO_BASE;
         } else if (tipo == TipoColaborador.COMISSIONADO) {
-            double comissao = SALARIO_BASE*percentualComissao / 100;
+            double comissao = vendas * percentualComissao / 100;
             return SALARIO_BASE + comissao;
         } else if (tipo == TipoColaborador.PRODUCAO) {
             double bonus = valorPorPeca*quantidadeProduzida;
