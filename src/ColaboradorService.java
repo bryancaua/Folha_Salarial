@@ -4,6 +4,10 @@ import java.util.List;
 public class ColaboradorService {
     private List<Colaborador> colaboradores = new ArrayList<>();
 
+    public boolean checarListaVazia() {
+        return colaboradores.isEmpty();
+    }
+
     public void cadastrar (Colaborador colaborador) {
         colaboradores.add(colaborador);
     }
