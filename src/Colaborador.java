@@ -12,13 +12,35 @@ public class Colaborador {
     private double valorPorPeca;
     private int quantidadeProduzida;
 
-    // Construtor obs: criar depois 3 public Colaborador, cada um vai ter os seus tipos, por exemplo Colaborador PADRAO (int registro, String nome, TipoColaborador tipo) e assim por diante por que aí cada um carrega apenas seus dados necessários e fica mais fácil e intuitivo durante a construção deles no main (será que da certo mesmo?)
-    public Colaborador(int registro, String nome, TipoColaborador tipo, double vendas, double percentualComissao, double valorPorPeca, int quantidadeProduzida) {
+    // Construtor PADRAO
+    public Colaborador(int registro, String nome, TipoColaborador tipo) {
+        this.registro = registro;
+        this.nome = nome;
+        this.tipo = tipo;
+        this.vendas = 0;
+        this.percentualComissao = 0;
+        this.valorPorPeca = 0;
+        this.quantidadeProduzida = 0;
+    }
+
+    // Construtor COMISSIONADO
+    public Colaborador(int registro, String nome, TipoColaborador tipo, double vendas, double percentualComissao) {
         this.registro = registro;
         this.nome = nome;
         this.tipo = tipo;
         this.vendas = vendas;
         this.percentualComissao = percentualComissao;
+        this.valorPorPeca = 0;
+        this.quantidadeProduzida = 0;
+    }
+
+    // Construtor PRODUCAO
+    public Colaborador(int registro, String nome, TipoColaborador tipo, double valorPorPeca, int quantidadeProduzida) {
+        this.registro = registro;
+        this.nome = nome;
+        this.tipo = tipo;
+        this.vendas = 0;
+        this.percentualComissao = 0;
         this.valorPorPeca = valorPorPeca;
         this.quantidadeProduzida = quantidadeProduzida;
     }
