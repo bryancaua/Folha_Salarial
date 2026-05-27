@@ -13,6 +13,10 @@ public class ColaboradorService {
         colaboradores.add(colaborador);
     }
 
+    public String cadastroSucesso() {
+        return "Colaborador cadastrado com sucesso!";
+    }
+
     public void cadastrarPadrao(Scanner entrada) {
         TipoColaborador tipo = TipoColaborador.PADRAO;
 
@@ -23,6 +27,7 @@ public class ColaboradorService {
         String nome = entrada.nextLine();
         Colaborador colaborador = new Colaborador(registro, nome, tipo);
         cadastrar(colaborador);
+        System.out.println(cadastroSucesso());
     }
 
     public void cadastrarComissionado(Scanner entrada) {
@@ -39,6 +44,7 @@ public class ColaboradorService {
         double percentualComissao = entrada.nextDouble();
         Colaborador colaborador2 = new Colaborador(registro2, nome2, tipo2, vendas, percentualComissao);
         cadastrar(colaborador2);
+        System.out.println(cadastroSucesso());
     }
 
     public void cadastrarProducao(Scanner entrada) {
@@ -56,6 +62,7 @@ public class ColaboradorService {
         entrada.nextLine();
         Colaborador colaborador3 = new Colaborador(registro3, nome3, tipo3, valorPorPeca, quantidadeProduzida);
         cadastrar(colaborador3);
+        System.out.println(cadastroSucesso());
     }
 
     public void listar () {
